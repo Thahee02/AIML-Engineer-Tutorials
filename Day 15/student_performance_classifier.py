@@ -18,9 +18,11 @@ data = {
 df = pd.DataFrame(data)
 print(df)
 
-# Specify the features and target variable
+# Specify the features variable
 X = df[["Study_Hours", "Attendance", "Previous_Score"]]
-y = df["Pass"]
+
+# Specify the target variable
+y = df["Pass"] # 0 = Fail, 1 = Pass
 
 # Split the dataset into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
